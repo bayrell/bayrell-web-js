@@ -16,8 +16,81 @@
  *  limitations under the License.
  */
 
-var exports = {
-	VERSION: '0.0.1',
+
+/**
+ * Module version
+ */
+export const VERSION = '0.0.1';
+
+
+/**
+ * Virtual Dom Types
+ */
+export const VirtualDomTypes = 
+{
+	ELEMENT: "element",
+	COMPONENT: "component",
+};
+
+
+/**
+ * Virtual Dom Class
+ */
+export class VirtualDom
+{
+	/**
+	 * Constructor
+	 */
+	constructor()
+	{
+		this.elem = null;
+		this.type = "";
+		this.index = 0;
+	}
+
+
+	/**
+	 * Create new instance of the VirtualDom
+	 * @param {HTMLElement} elem 
+	 * @param {VirtualDomTypes} type 
+	 * @returns 
+	 */
+	static create(elem, type)
+	{
+		let res = new VirtualDom();
+		res.elem = elem;
+		res.type = type;
+		return res;
+	}
+
+
+	/**
+	 * Create next element
+	 * @param {HTMLElement} elem_name 
+	 * @param {Dict} attrs 
+	 * @returns 
+	 */
+    e(elem_name, attrs)
+	{
+		let new_virtual_dom = new VirtualDom();
+		return new_virtual_dom;
+	}
+
+
+	/**
+	 * Patch virtual dom
+	 */
+	p()
+	{
+
+	}
 }
 
-module.exports = exports;
+
+/**
+ * Component
+ */
+export class Component
+{
+
+}
